@@ -1,11 +1,13 @@
 @tailwind base;
 
 /* Write your own custom base styles here */
+@import './_typography.scss';
 
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
 
+/* Write you own custom component styles here */
 html,
 body {
   @apply bg-gray-50 dark:bg-gray-900;
@@ -14,6 +16,20 @@ body {
 /* Write your own custom component styles here */
 .btn-blue {
   @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
+}
+
+h1 {
+  @apply text-5xl;
+}
+h2 {
+  @apply text-2xl;
+}
+.header {
+  @apply text-center text-gray-700 dark:text-gray-100;
+}
+
+.nav_a {
+  @apply no-underline text-accent-1 dark:text-blue-300;
 }
 
 /* Start purging... */

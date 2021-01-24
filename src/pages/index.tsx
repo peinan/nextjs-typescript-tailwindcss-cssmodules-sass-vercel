@@ -1,14 +1,17 @@
 import Nav from '../components/nav'
 
-export default function IndexPage() {
-  return (
+export default () => (
+  <>
     <div>
       <Nav />
       <div className="py-20">
-        <h1 className="text-5xl text-center text-gray-700 dark:text-gray-100">
+        <h1 className="header">
           Next.js + Tailwind CSS 2.0
         </h1>
+        <h2 className="header">
+          I l 1234567890
+        </h2>
       </div>
     </div>
-  )
-}
+  </>
+)
