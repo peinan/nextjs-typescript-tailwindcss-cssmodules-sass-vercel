@@ -2,6 +2,11 @@ const withSass = require("@zeit/next-sass");
 const tailwindCss = require("tailwindcss");
 
 module.exports = withSass({
+  // cssModules: true,
+  // cssLoaderOptions: {
+  //   importLoaders: 1,
+  //   localIdentName: "[local]___[hash:base64:5]",
+  // },
   webpack(config) {
     const rules = [
       {
@@ -14,7 +19,14 @@ module.exports = withSass({
               plugins: [tailwindCss("./tailwind.config.js")],
             },
           },
-          { loader: "sass-loader" },
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                includePaths: ['src/styles/']
+              }
+            }
+          },
         ],
       },
     ];

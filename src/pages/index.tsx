@@ -11,6 +11,9 @@ export default () => (
         <h2 className="header">
           I l 1234567890
         </h2>
+        <a className="anchor">
+          Anchor Link
+        </a>
       </div>
     </div>
   </>
